@@ -2,8 +2,7 @@
 
 Configuration of tools I use
 
-## install
-
+Install:
 ```
 sudo apt-get install git
 git clone https://github.com/denis-ryzhkov/config.git
@@ -12,8 +11,9 @@ cd config
 
 ## micro
 
-https://micro-editor.github.io/ by [@zyedidia](https://github.com/zyedidia)
+https://micro-editor.github.io/
 
+Install:
 ```
 sudo snap install micro --classic
 micro -plugin install bounce manipulator
