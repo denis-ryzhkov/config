@@ -2,17 +2,37 @@
 
 Configuration of tools I use
 
+## install
+
+```
+sudo apt-get install git
+git clone https://github.com/denis-ryzhkov/config.git
+cd config
+```
+
 ## micro
 
 https://micro-editor.github.io/ by [@zyedidia](https://github.com/zyedidia)
 
-* `echo 'alias e=micro' >> ~/.bashrc`
-* `e README.md`
-* `Ctrl+E` - `help` - `Ctrl+Q`
-* `Ctrl+E` - `plugin install bounce` - `Ctrl+Q`
-* `Ctrl+E` - `plugin install manipulator` - `Ctrl+Q`
-* `Ctrl+Q`
-* `cat micro/*`
-* `cp micro/* ~/.config/micro`
-* `sudo apt-get install xsel`
-    * Test external copy-paste without `xsel` first: it freezes on big chunks of text
+```
+sudo snap install micro --classic
+micro -plugin install bounce manipulator
+sudo apt-get install xsel
+cp micro/* ~/.config/micro
+echo 'alias e=micro' >> ~/.bashrc
+exit
+```
+
+Usage:
+```
+e README.md
+# Ctrl+E
+# help
+# Ctrl+Q
+```
+
+Known issues:
+* xsel freezes?
+    * Copy a lot of text in micro, paste in GUI, e.g. Chrome
+    * Result: Chrome is freezed
+    * Workaround: `killall chrome`, copy-paste smaller chunks
