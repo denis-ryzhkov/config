@@ -1,0 +1,17 @@
+{
+    "autoclose": false,
+    "colorcolumn": 88,
+    "colorscheme": "darcula",
+    "diffgutter": true,
+    "linter": false,
+    "pluginchannels": [
+        "https://raw.githubusercontent.com/micro-editor/plugin-channel/master/channel.json"
+    ],
+    "pluginrepos": [],
+    "ruler": false,
+    "savecursor": true,
+    "savehistory": false,
+    "statusformatl": "L$(line) C$(col)",
+    "statusformatr": "$(status.branch) $(filename) $(modified)",
+    "tabstospaces": true
+}
