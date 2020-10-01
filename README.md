@@ -17,7 +17,6 @@ https://micro-editor.github.io/ by [@zyedidia](https://github.com/zyedidia)
 ```
 sudo snap install micro --classic
 micro -plugin install bounce manipulator
-sudo apt-get install xsel
 cp micro/* ~/.config/micro
 echo 'alias e=micro' >> ~/.bashrc
 exit
@@ -31,8 +30,8 @@ e README.md
 # Ctrl+Q
 ```
 
-Known issues:
-* xsel freezes?
-    * Copy a lot of text in micro, paste in GUI, e.g. Chrome
-    * Result: Chrome is freezed
-    * Workaround: `killall chrome`, copy-paste smaller chunks
+External clipboard issue:
+* Exit micro
+* Try `sudo apt install xclip`
+* If it still fails, `sudo apt remove xclip && sudo apt install xsel`
+* Avoid copy-paste of big chunk of text from micro to GUI: it may get freezed
