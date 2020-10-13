@@ -53,3 +53,13 @@ External clipboard issue:
 * Try `sudo apt install xclip`
 * If it still fails, `sudo apt remove xclip && sudo apt install xsel`
 * Avoid copy-paste of big chunk of text from micro to GUI: it may get freezed
+
+## On noise from speakers
+
+https://askubuntu.com/a/1230834
+
+```
+echo 0 | sudo tee /sys/module/snd_hda_intel/parameters/power_save
+echo "options snd_hda_intel power_save=0" \
+    | sudo tee -a /etc/modprobe.d/audio_disable_powersave.conf
+```
