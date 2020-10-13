@@ -9,6 +9,21 @@ git clone https://github.com/denis-ryzhkov/config.git
 cd config
 ```
 
+## guake
+
+http://guake-project.org/
+
+Install:
+```
+sudo apt install guake dconf-cli
+guake --restore-preferences=guake.dconf
+guake
+```
+
+Usage:
+* Press `Pause` button, again, again
+* On python traceback, Ctrl+Click file/line to open it in `micro` editor below
+
 ## micro
 
 https://micro-editor.github.io/
@@ -17,8 +32,11 @@ Install:
 ```
 sudo snap install micro --classic
 micro -plugin install bounce manipulator
+sudo !!
 cp micro/* ~/.config/micro
+sudo cp micro/* /root/.config/micro
 echo 'alias e=micro' >> ~/.bashrc
+echo 'alias e=micro' | sudo tee -a /root/.bashrc
 exit
 ```
 
