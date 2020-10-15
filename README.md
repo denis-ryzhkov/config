@@ -54,6 +54,19 @@ External clipboard issue:
 * If it still fails, `sudo apt remove xclip && sudo apt install xsel`
 * Avoid copy-paste of big chunk of text from micro to GUI: it may get freezed
 
+## .bashrc
+
+```
+e ~/.bashrc
+# Append to the end:
+alias e=micro
+alias gd='git diff --color-words'
+alias gl='git log --decorate=full --graph'
+alias o=xdg-open
+export CDPATH=$REDACTED/cdpath
+export EDITOR=micro
+```
+
 ## On noise from speakers
 
 https://askubuntu.com/a/1230834
