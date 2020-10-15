@@ -4,7 +4,7 @@ Configuration of tools I use
 
 Install:
 ```
-sudo apt-get install git
+sudo apt install git
 git clone https://github.com/denis-ryzhkov/config.git
 cd config
 ```
@@ -17,7 +17,9 @@ Install:
 ```
 sudo apt install guake dconf-cli
 guake --restore-preferences=guake.dconf
-guake
+lxqt-config-session
+# Autostart - Add - guake
+# App Menu - System Tools - Guake Terminal
 ```
 
 Usage:
@@ -33,8 +35,8 @@ Install:
 sudo snap install micro --classic
 micro -plugin install bounce manipulator
 sudo !!
-cp micro/* ~/.config/micro
-sudo cp micro/* /root/.config/micro
+cp micro/* ~/.config/micro/
+sudo cp micro/* /root/.config/micro/
 echo 'alias e=micro' >> ~/.bashrc
 echo 'alias e=micro' | sudo tee -a /root/.bashrc
 exit
@@ -66,6 +68,19 @@ alias o=xdg-open
 export CDPATH=$REDACTED/cdpath
 export EDITOR=micro
 ```
+
+## vlc
+
+https://www.videolan.org/vlc/
+
+Configure:
+```
+cp vlc/* ~/.config/vlc/
+```
+
+Usage:
+* Drag mouse left-right for pause/play
+
 
 ## On noise from speakers
 
