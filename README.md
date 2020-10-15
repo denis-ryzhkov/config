@@ -22,7 +22,7 @@ Install:
 * https://help.ubuntu.com/community/mkusb
 
 On noise from speakers:
-https://askubuntu.com/a/1230834
+* https://askubuntu.com/a/1230834
 
 ```
 echo 0 | sudo tee /sys/module/snd_hda_intel/parameters/power_save
