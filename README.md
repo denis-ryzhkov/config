@@ -1,12 +1,33 @@
 # config
 
-Configuration of tools I use
+Configuration of tools I use:
+* [lubuntu](#lubuntu)
+* [guake](#guake)
+* [micro](#micro)
+* [.bashrc](#bashrc)
+* [vlc](#vlc)
 
 Install:
 ```
-sudo apt install git
 git clone https://github.com/denis-ryzhkov/config.git
 cd config
+```
+
+## lubuntu
+
+https://lubuntu.me/
+
+Install:
+* https://lubuntu.me/downloads/
+* https://help.ubuntu.com/community/mkusb
+
+On noise from speakers:
+https://askubuntu.com/a/1230834
+
+```
+echo 0 | sudo tee /sys/module/snd_hda_intel/parameters/power_save
+echo "options snd_hda_intel power_save=0" \
+    | sudo tee -a /etc/modprobe.d/audio_disable_powersave.conf
 ```
 
 ## guake
@@ -80,14 +101,3 @@ cp vlc/* ~/.config/vlc/
 
 Usage:
 * Drag mouse left-right for pause/play
-
-
-## On noise from speakers
-
-https://askubuntu.com/a/1230834
-
-```
-echo 0 | sudo tee /sys/module/snd_hda_intel/parameters/power_save
-echo "options snd_hda_intel power_save=0" \
-    | sudo tee -a /etc/modprobe.d/audio_disable_powersave.conf
-```
