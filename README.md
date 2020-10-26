@@ -21,6 +21,11 @@ Install:
 * https://lubuntu.me/downloads/
 * https://help.ubuntu.com/community/mkusb
 
+On touchpad touch-to-click fails:
+* `lxqt-config-input`
+* Scroll to "Mouse and Touchpad"
+* Enable "Single click to activate items"
+
 On noise from speakers:
 * https://askubuntu.com/a/1230834
 
