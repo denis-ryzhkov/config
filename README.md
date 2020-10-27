@@ -2,7 +2,7 @@
 
 Configuration of tools I use:
 * [lubuntu](#lubuntu)
-* [guake](#guake)
+* [kitty](#kitty)
 * [micro](#micro)
 * [.bashrc](#bashrc)
 * [vlc](#vlc)
