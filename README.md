@@ -35,22 +35,24 @@ echo "options snd_hda_intel power_save=0" \
     | sudo tee -a /etc/modprobe.d/audio_disable_powersave.conf
 ```
 
-## guake
+## kitty
 
-http://guake-project.org/
+https://sw.kovidgoyal.net/kitty/
 
 Install:
 ```
-sudo apt install guake dconf-cli
-guake --restore-preferences=guake.dconf
-lxqt-config-session
-# Autostart - Add - guake
-# App Menu - System Tools - Guake Terminal
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | bash
+cp kitty/dr.conf ~/.config/kitty/
+echo -e '\ninclude dr.conf' >> ~/.config/kitty/kitty.conf
+
+lxqt-config-globalkeyshortcuts
+# Find "Control+Alt+T" - Modify - Command: /home/dr/.local/kitty.app/bin/kitty
 ```
 
 Usage:
-* Press `Pause` button, again, again
-* On python traceback, Ctrl+Click file/line to open it in `micro` editor below
+* Ctrl+Alt+T
+* Defaults: https://sw.kovidgoyal.net/kitty/#tabs-and-windows
+* Personal: `config/kitty/dr.config`
 
 ## micro
 
@@ -91,8 +93,8 @@ alias e=micro
 alias gd='git diff --color-words'
 alias gl='git log --decorate=full --graph'
 alias o=xdg-open
-export CDPATH=$REDACTED/cdpath
-export EDITOR=micro
+CDPATH=$REDACTED/cdpath
+EDITOR=micro
 ```
 
 ## vlc

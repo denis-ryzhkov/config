@@ -16,7 +16,6 @@
     "CtrlShiftEnd": "SelectToEnd",
     "CtrlShiftHome": "SelectToStart",
     "CtrlU": "None",
-    "CtrlUnderscore": "lua:comment.comment",
     "CtrlUp": "ParagraphPrevious",
     "CtrlY": "DeleteLine",
     "Insert": "None",
