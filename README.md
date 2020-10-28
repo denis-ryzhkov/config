@@ -45,8 +45,13 @@ curl -L https://sw.kovidgoyal.net/kitty/installer.sh | bash
 cp kitty/dr.conf ~/.config/kitty/
 echo -e '\ninclude dr.conf' >> ~/.config/kitty/kitty.conf
 
+sudo visudo
+# Append:
+# Defaults env_keep += "TERM TERMINFO"
+
 lxqt-config-globalkeyshortcuts
-# Find "Control+Alt+T" - Modify - Command: /home/dr/.local/kitty.app/bin/kitty
+# Find "Control+Alt+T" - Modify - Command:
+# /home/dr/.local/kitty.app/bin/kitty
 ```
 
 Usage:
