@@ -14,5 +14,9 @@
     "savehistory": false,
     "statusformatl": "L$(line) C$(col)",
     "statusformatr": "$(status.branch) $(filename) $(modified)",
+    "tabsize": 4,
+    "ft:dart": {
+        "tabsize": 2
+    },
     "tabstospaces": true
 }

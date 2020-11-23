@@ -100,7 +100,11 @@ alias gl='git log --decorate=full --graph'
 alias o=xdg-open
 CDPATH=$REDACTED/cdpath
 EDITOR=micro
+VISUAL=$EDITOR
 ```
+
+* `git commit` kept ignoring `micro` even with `GIT_EDITOR` var,
+but `git config --global core.editor micro` solved the issue
 
 ## vlc
 
