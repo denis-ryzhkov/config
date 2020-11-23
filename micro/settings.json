@@ -3,6 +3,10 @@
     "colorcolumn": 88,
     "colorscheme": "darcula",
     "diffgutter": true,
+    "ft:dart": {
+        "colorcolumn": 80,
+        "tabsize": 2
+    },
     "linter": false,
     "parsecursor": true,
     "pluginchannels": [
@@ -15,8 +19,5 @@
     "statusformatl": "L$(line) C$(col)",
     "statusformatr": "$(status.branch) $(filename) $(modified)",
     "tabsize": 4,
-    "ft:dart": {
-        "tabsize": 2
-    },
     "tabstospaces": true
 }
