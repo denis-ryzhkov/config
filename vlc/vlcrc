@@ -4556,13 +4556,13 @@ key-vol-mute=
 #global-key-subdelay-up=
 
 # Subtitle delay up (string)
-key-subdelay-up=
+key-subdelay-up=Right
 
 # Subtitle delay down (string)
 #global-key-subdelay-down=
 
 # Subtitle delay down (string)
-key-subdelay-down=
+key-subdelay-down=Left
 
 # Subtitle sync / bookmark audio timestamp (string)
 #global-key-subsync-markaudio=
