@@ -94,11 +94,13 @@ External clipboard issue:
 ```
 e ~/.bashrc
 # Append to the end:
+
+alias cd='cd -P'
 alias e=micro
 alias gd='git diff --color-words'
 alias gl='git log --decorate=full --graph'
 alias o=xdg-open
-CDPATH=$REDACTED/cdpath
+CDPATH=$REDACTED/cdpath:$REDACTED/docs
 EDITOR=micro
 VISUAL=$EDITOR
 ```
