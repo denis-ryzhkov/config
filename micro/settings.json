@@ -7,6 +7,9 @@
         "colorcolumn": 80,
         "tabsize": 2
     },
+    "ft:json": {
+        "tabsize": 2
+    },
     "ft:yaml": {
         "tabsize": 2
     },
@@ -19,7 +22,7 @@
     "ruler": false,
     "savecursor": true,
     "savehistory": false,
-    "statusformatl": "L$(line) C$(col)",
+    "statusformatl": "L$(line)/$(status.lines) C$(col)",
     "statusformatr": "$(status.branch) $(filename) $(modified)",
     "tabsize": 4,
     "tabstospaces": true
