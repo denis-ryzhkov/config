@@ -119,3 +119,10 @@ cp vlc/* ~/.config/vlc/
 
 Usage:
 * Drag mouse left-right for pause/play
+
+## docker
+
+Cleanup:
+```
+docker system prune --all --volumes
+```
