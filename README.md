@@ -58,7 +58,7 @@ lxqt-config-globalkeyshortcuts
 
 Usage:
 * Ctrl+Alt+T
-* Defaults: https://sw.kovidgoyal.net/kitty/#tabs-and-windows
+* Defaults: https://sw.kovidgoyal.net/kitty/conf/
 * Personal: [kitty/dr.conf](kitty/dr.conf)
 
 ## micro
