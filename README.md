@@ -4,7 +4,7 @@ Configuration of tools I use:
 * [lubuntu](#lubuntu)
 * [kitty](#kitty)
 * [micro](#micro)
-* [.bashrc](#bashrc)
+* [bash](#bash)
 * [vlc](#vlc)
 * [vsftpd](#vsftpd)
 * [docker](#docker)
@@ -91,7 +91,9 @@ External clipboard issue:
 * If it still fails, `sudo apt remove xclip && sudo apt install xsel`
 * Avoid copy-paste of big chunk of text from micro to GUI: it may get freezed
 
-## .bashrc
+## bash
+
+https://www.gnu.org/software/bash/
 
 ```
 e ~/.bashrc
@@ -124,6 +126,9 @@ Usage:
 
 ## vsftpd
 
+https://security.appspot.com/vsftpd.html
+
+Why:
 * "VLC - Playback - Renderer - TV" requires re-encoding most videos,
   TV remote control becomes useless, bad UX
 * VLC for TV plays videos from removable media with best UX,
@@ -160,6 +165,8 @@ ls
   play videos, or copy them to TV's internal storage, and play them with VLC for TV
 
 ## docker
+
+https://www.docker.com/
 
 Cleanup:
 ```
