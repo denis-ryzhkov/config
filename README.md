@@ -6,6 +6,8 @@ Configuration of tools I use:
 * [micro](#micro)
 * [.bashrc](#bashrc)
 * [vlc](#vlc)
+* [vsftpd](#vsftpd)
+* [docker](#docker)
 
 Install:
 ```
@@ -119,6 +121,43 @@ cp vlc/* ~/.config/vlc/
 
 Usage:
 * Drag mouse left-right for pause/play
+
+## vsftpd
+
+* "VLC - Playback - Renderer - TV" requires re-encoding most videos,
+  TV remote control becomes useless, bad UX
+* VLC for TV plays videos from removable media with best UX,
+  but you need to insert and safe-eject it on both devices every time
+* VLC for TV can play videos on FTP server:
+
+```
+sudo su
+apt install vsftpd
+e /etc/vsftpd.conf
+    local_enable=YES
+    chroot_local_user=YES
+
+service vsftpd restart
+useradd -rm pub
+passwd pub
+rm /home/pub/.*
+exit
+
+sudo chown $USER:$USER /home/pub
+cd ~/Downloads
+ln -s /home/pub
+mv $FILES pub/
+
+# Test:
+ifconfig | grep 192.168
+ftp 192.168.1.36
+ls
+```
+
+* VLC for TV - Add server to Favorities - the server added - play videos!
+* If VLC for TV fails to play some videos via FTP,
+  then install "X-plore" app for TV, connect to the same FTP server,
+  play videos, or copy them to TV's internal storage, and play them with VLC for TV
 
 ## docker
 
