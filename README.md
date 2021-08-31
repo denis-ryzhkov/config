@@ -37,6 +37,15 @@ echo "options snd_hda_intel power_save=0" \
     | sudo tee -a /etc/modprobe.d/audio_disable_powersave.conf
 ```
 
+On keyring popup:
+* https://askubuntu.com/a/666664
+
+```
+sudo apt install libpam-gnome-keyring
+echo 'password optional pam_gnome_keyring.so' | sudo tee /etc/pam.d/passwd
+echo 'session optional pam_gnome_keyring.so auto_start' | sudo tee /etc/pam.d/login
+```
+
 ## kitty
 
 https://sw.kovidgoyal.net/kitty/
