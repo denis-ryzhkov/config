@@ -6,6 +6,7 @@ Configuration of tools I use:
 * [kitty](#kitty)
 * [micro](#micro)
 * [bash](#bash)
+* [git](#git)
 * [vlc](#vlc)
 * [vsftpd](#vsftpd)
 * [docker](#docker)
