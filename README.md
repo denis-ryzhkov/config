@@ -160,6 +160,8 @@ e ~/.gitconfig
 
 https://www.videolan.org/vlc/
 
+Run and exit VLC to make sure it uses `~/.config/vlc`
+
 Configure:
 ```
 cp vlc/* ~/.config/vlc/
@@ -167,6 +169,7 @@ cp vlc/* ~/.config/vlc/
 
 Usage:
 * Drag mouse left-right for pause/play
+* Drag mouse left or right to skip 10 seconds
 
 ## vsftpd
 
@@ -190,6 +193,7 @@ sudo su
 e /etc/vsftpd.conf
     local_enable=YES
     chroot_local_user=YES
+    xferlog_enable=NO
 
 service vsftpd restart
 useradd -rm pub
@@ -197,7 +201,7 @@ passwd pub
 rm /home/pub/.*
 exit
 
-sudo chown $USER:$USER /home/pub
+sudo chown $USER:pub /home/pub
 cd ~/Downloads
 ln -s /home/pub
 mv $FILES pub/
