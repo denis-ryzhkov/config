@@ -1,0 +1,10 @@
+[user]
+email = REDACTED
+name = REDACTED
+
+[push]
+default = simple
+
+[core]
+pager = less -P %Pb
+editor = micro

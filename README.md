@@ -50,6 +50,7 @@ echo 'session optional pam_gnome_keyring.so auto_start' | sudo tee /etc/pam.d/lo
 
 ## nvidia
 
+Install:
 ```
 sudo su
 add-apt-repository ppa:graphics-drivers/ppa
@@ -66,6 +67,10 @@ https://sw.kovidgoyal.net/kitty/
 Install:
 ```
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | bash
+```
+
+Configure:
+```
 cp kitty/dr.conf ~/.config/kitty/
 echo -e '\ninclude dr.conf' >> ~/.config/kitty/kitty.conf
 
@@ -90,12 +95,16 @@ https://micro-editor.github.io/
 Install:
 ```
 sudo snap install micro --classic
+```
+
+Configure:
+```
 micro -plugin install bounce manipulator
 sudo !!
 cp micro/* ~/.config/micro/
 sudo cp micro/* /root/.config/micro/
-echo 'alias e=micro' >> ~/.bashrc
-echo 'alias e=micro' | sudo tee -a /root/.bashrc
+echo -e '\nalias e=micro' >> ~/.bashrc
+echo -e '\nalias e=micro' | sudo tee -a /root/.bashrc
 exit
 ```
 
@@ -117,6 +126,7 @@ External clipboard issue:
 
 https://www.gnu.org/software/bash/
 
+Configure:
 ```
 e ~/.bashrc
 # Append to the end:
@@ -133,6 +143,17 @@ VISUAL=$EDITOR
 
 * `git commit` kept ignoring `micro` even with `GIT_EDITOR` var,
 but `git config --global core.editor micro` solved the issue
+
+## git
+
+https://git-scm.com/
+
+Configure:
+```
+cp git/.gitconfig ~/
+e ~/.gitconfig
+# Update `name` and `email`
+```
 
 ## vlc
 
@@ -157,9 +178,14 @@ Why:
   but you need to insert and safe-eject it on both devices every time
 * VLC for TV can play videos on FTP server:
 
+Install:
+```
+sudo apt install vsftpd
+```
+
+Configure:
 ```
 sudo su
-apt install vsftpd
 e /etc/vsftpd.conf
     local_enable=YES
     chroot_local_user=YES
@@ -174,8 +200,10 @@ sudo chown $USER:$USER /home/pub
 cd ~/Downloads
 ln -s /home/pub
 mv $FILES pub/
+```
 
-# Test:
+Test:
+```
 ifconfig | grep 192.168
 ftp 192.168.1.36
 ls
