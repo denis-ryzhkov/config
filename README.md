@@ -2,6 +2,7 @@
 
 Configuration of tools I use:
 * [lubuntu](#lubuntu)
+* [nvidia](#nvidia)
 * [kitty](#kitty)
 * [micro](#micro)
 * [bash](#bash)
@@ -44,6 +45,17 @@ On keyring popup:
 sudo apt install libpam-gnome-keyring
 echo 'password optional pam_gnome_keyring.so' | sudo tee /etc/pam.d/passwd
 echo 'session optional pam_gnome_keyring.so auto_start' | sudo tee /etc/pam.d/login
+```
+
+## nvidia
+
+```
+sudo su
+add-apt-repository ppa:graphics-drivers/ppa
+ubuntu-drivers devices
+# Note the recommended driver version
+apt install nvidia-driver-470
+reboot
 ```
 
 ## kitty
