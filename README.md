@@ -27,7 +27,8 @@ Install:
 On touchpad touch-to-click fails:
 * `lxqt-config-input`
 * Scroll to "Mouse and Touchpad"
-* Enable "Single click to activate items"
+* Select "Device: Touchpad"
+* Enable "Tap to click"
 
 On noise from speakers:
 * https://askubuntu.com/a/1230834
