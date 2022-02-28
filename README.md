@@ -25,19 +25,22 @@ Install:
 * https://lubuntu.me/downloads/
 * https://help.ubuntu.com/community/mkusb
 
-On touchpad touch-to-click fails:
+### On touchpad touch-to-click fails
+
 * `lxqt-config-input`
 * Scroll to "Mouse and Touchpad"
 * Select "Device: Touchpad"
 * Enable "Tap to click"
 
-On WiFi shows networks but fails to connect:
+### On WiFi shows networks but fails to connect
+
 ```
 iw reg get  # See current country
 iw reg set $CC  # Two-letter ISO country code
 ```
 
-On noise from speakers:
+### On noise from speakers
+
 * https://askubuntu.com/a/1230834
 
 ```
@@ -46,7 +49,8 @@ echo "options snd_hda_intel power_save=0" \
     | sudo tee -a /etc/modprobe.d/audio_disable_powersave.conf
 ```
 
-On keyring popup:
+### On keyring popup
+
 * https://askubuntu.com/a/666664
 
 ```
@@ -123,7 +127,8 @@ e README.md
 # Ctrl+Q
 ```
 
-External clipboard issue:
+### On external clipboard issue
+
 * Exit micro
 * Try `sudo apt install xclip`
 * If it still fails, `sudo apt remove xclip && sudo apt install xsel`
