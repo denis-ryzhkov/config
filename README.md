@@ -31,6 +31,12 @@ On touchpad touch-to-click fails:
 * Select "Device: Touchpad"
 * Enable "Tap to click"
 
+On WiFi shows networks but fails to connect:
+```
+iw reg get  # See current country
+iw reg set $CC  # Two-letter ISO country code
+```
+
 On noise from speakers:
 * https://askubuntu.com/a/1230834
 
@@ -136,6 +142,7 @@ alias cd='cd -P'
 alias e=micro
 alias gd='git diff --color-words'
 alias gl='git log --decorate=full --graph'
+alias ll='ls -alF --full-time'
 alias o=xdg-open
 CDPATH=$REDACTED/cdpath:$REDACTED/docs
 EDITOR=micro
