@@ -150,7 +150,7 @@ alias gl='git log --decorate=full --graph'
 alias ll='ls -alF --full-time'
 alias o=xdg-open
 function difff { wdiff "$1" "$2" | colordiff | less -r; }
-CDPATH=/home/dr/.cdpath
+CDPATH=/home/dr/.cdpath  # cd .cdpath && ln -s /path/to/frequent/dir && cd dir
 EDITOR=micro
 VISUAL=$EDITOR
 ```
