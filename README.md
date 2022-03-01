@@ -149,6 +149,7 @@ alias gd='git diff --color-words'
 alias gl='git log --decorate=full --graph'
 alias ll='ls -alF --full-time'
 alias o=xdg-open
+function difff { wdiff "$1" "$2" | colordiff | less -r; }
 CDPATH=$REDACTED/cdpath:$REDACTED/docs
 EDITOR=micro
 VISUAL=$EDITOR
