@@ -147,7 +147,7 @@ alias cd='cd -P'
 alias e=micro
 alias gd='git diff --color-words'
 alias gl='git log --decorate=full --graph'
-alias ll='ls -alF --full-time'
+alias ll='ls -alF --time-style=long-iso'
 alias o=xdg-open
 
 function difl { colordiff -u "$1" "$2" | less -r; }
