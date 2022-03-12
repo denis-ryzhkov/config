@@ -2,7 +2,6 @@
 
 Configuration of tools I use:
 * [lubuntu](#lubuntu)
-* [nvidia](#nvidia)
 * [kitty](#kitty)
 * [micro](#micro)
 * [bash](#bash)
@@ -22,10 +21,21 @@ cd config
 https://lubuntu.me/
 
 Install:
-* https://lubuntu.me/downloads/
-* https://help.ubuntu.com/community/mkusb
+* Open https://lubuntu.me/downloads/
+* Download the magnet link
+* Open it with a BitTorrent client like the default Transmission
+* Install `mkusb` as in https://help.ubuntu.com/community/mkusb
+* Prepare, but don't insert the USB drive
+* Wait until ISO file gets downloaded
+* Run `mkusb`, follow the instructions, select:
+    * `p` - Plug
+    * `l` - Live drive with 'usbdata' partition
+    * `n` - NTFS
+    * `n` - No other filesystems
 
-### On touchpad touch-to-click fails
+* Boot the target computer from this USB drive and install lubuntu
+
+### Tap to click
 
 * `lxqt-config-input`
 * Scroll to "Mouse and Touchpad"
@@ -49,19 +59,8 @@ echo "options snd_hda_intel power_save=0" \
     | sudo tee -a /etc/modprobe.d/audio_disable_powersave.conf
 ```
 
-### On keyring popup
+### nvidia driver
 
-* https://askubuntu.com/a/666664
-
-```
-sudo apt install libpam-gnome-keyring
-echo 'password optional pam_gnome_keyring.so' | sudo tee /etc/pam.d/passwd
-echo 'session optional pam_gnome_keyring.so auto_start' | sudo tee /etc/pam.d/login
-```
-
-## nvidia
-
-Install:
 ```
 sudo su
 add-apt-repository ppa:graphics-drivers/ppa
@@ -144,6 +143,7 @@ e ~/.bashrc
 # Append to the end:
 
 alias cd='cd -P'
+alias cp='rsync -ah --progress'
 alias e=micro
 alias gd='git diff --color-words'
 alias gl='git log --decorate=full --graph'
