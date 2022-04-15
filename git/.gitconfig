@@ -2,9 +2,12 @@
 email = REDACTED
 name = REDACTED
 
-[push]
-default = simple
-
 [core]
 pager = less -P %Pb
 editor = micro
+
+[init]
+defaultBranch = main
+
+[push]
+default = simple

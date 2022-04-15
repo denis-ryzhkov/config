@@ -153,7 +153,7 @@ alias o=xdg-open
 function difl { colordiff -u "$1" "$2" | less -r; }
 function difw { wdiff "$1" "$2" | colordiff | less -r; }
 
-CDPATH=/home/dr/.cdpath  # cd .cdpath && ln -s /path/to/frequent/dir && cd dir
+CDPATH=$HOME/.cdpath  # cd .cdpath && ln -s /path/to/frequent/dir && cd dir
 EDITOR=micro
 VISUAL=$EDITOR
 ```
