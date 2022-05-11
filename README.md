@@ -49,6 +49,15 @@ iw reg get  # See current country
 iw reg set $CC  # Two-letter ISO country code
 ```
 
+### On brightness not adjustable
+
+```
+sudo chmod u+s /usr/bin/lxqt-backlight_backend
+lxqt-config-globalkeyshortcuts
+# XF86MonBrightnessDown - Command: lxqt-backlight_backend --dec
+# XF86MonBrightnessUp - Command: lxqt-backlight_backend --inc
+```
+
 ### On noise from speakers
 
 * https://askubuntu.com/a/1230834
