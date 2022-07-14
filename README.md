@@ -58,6 +58,13 @@ lxqt-config-globalkeyshortcuts
 # XF86MonBrightnessUp - Command: lxqt-backlight_backend --inc
 ```
 
+### On `ibus` shipped with `zoom` breaks keyboard layouts
+
+```
+ibus exit
+echo 'run_im none' > ~/.xinputrc
+```
+
 ### On noise from speakers
 
 * https://askubuntu.com/a/1230834
