@@ -7,6 +7,7 @@ Configuration of tools I use:
 * [bash](#bash)
 * [git](#git)
 * [vlc](#vlc)
+* [smplayer](#smplayer)
 * [vsftpd](#vsftpd)
 * [docker](#docker)
 
@@ -202,6 +203,32 @@ cp vlc/* ~/.config/vlc/
 Usage:
 * Drag mouse left-right for pause/play
 * Drag mouse left or right to skip 10 seconds
+
+## smplayer
+
+https://www.smplayer.info/
+
+Why:
+* VLC failed to load an audio track from external file, SMPlayer succeeded.
+
+Install:
+```
+sudo add-apt-repository ppa:rvm/smplayer
+sudo apt update
+sudo apt install smplayer smplayer-themes
+```
+
+Configure:
+* Options - Preferences
+    * Interface
+        * Interface - GUI: Mpc GUI
+        * Floating control - [v] Show only when moving the mouse to the bottom of the screen
+    * Keyboard and mouse
+        * Mouse
+            * Left click: Play / Pause
+            * Right click: Change function of wheel
+            * Drag function: Seek (horizontal) and volume (vertical)
+        * Mouse wheel functions: Media seeking, Volume control
 
 ## vsftpd
 
