@@ -204,6 +204,12 @@ Usage:
 * Drag mouse left-right for pause/play
 * Drag mouse left or right to skip 10 seconds
 
+### On audio not playing after pause/resume
+
+* Tools - Preferences - Audio:
+    * Output: ALSA
+    * Device: HD-Audio Generic, MODEL Analog Hardware device with all software conversions
+
 ## smplayer
 
 https://www.smplayer.info/
