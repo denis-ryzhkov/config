@@ -245,7 +245,8 @@ Why:
   TV remote control becomes useless, bad UX
 * VLC for TV plays videos from removable media with best UX,
   but you need to insert and safe-eject it on both devices every time
-* VLC for TV can play videos on FTP server:
+* VLC for TV can play videos on FTP server.
+* FTP server is also useful to share files inside of WiFi LAN.
 
 Install:
 ```
@@ -257,6 +258,7 @@ Configure:
 sudo su
 e /etc/vsftpd.conf
     local_enable=YES
+    write_enable=YES
     chroot_local_user=YES
     xferlog_enable=NO
 
@@ -264,12 +266,15 @@ service vsftpd restart
 useradd -rm pub
 passwd pub
 rm /home/pub/.*
+mkdir /home/pub/write
 exit
 
-sudo chown $USER:pub /home/pub
+sudo chown -R $USER:pub /home/pub
 cd ~/Downloads
 ln -s /home/pub
 mv $FILES pub/
+# These new files will be owned by `$USER:$USER`, readable but not writable for `pub`,
+# while `write` dir is still writable for `pub`.
 ```
 
 Test:
