@@ -13,9 +13,6 @@
     "ft:json": {
         "tabsize": 2
     },
-    "ft:typescript": {
-        "colorcolumn": 100,
-    },
     "ft:yaml": {
         "tabsize": 2
     },
