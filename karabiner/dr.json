@@ -58,7 +58,7 @@
       ]
     },
     {
-      "description": "Chrome: F6 - address bar, Ctrl+H - History, Ctrl+F4 - Close tab",
+      "description": "Chrome: F6 - address bar, Ctrl+R - Reload, Ctrl+H - History, Ctrl+F4 - Close tab",
       "manipulators": [
         {
           "type": "basic",
@@ -77,6 +77,15 @@
           }],
           "from": {"modifiers": {"mandatory": ["control"]}, "key_code": "h"},
           "to": {"modifiers": ["left_command"], "key_code": "y"}
+        },
+        {
+          "type": "basic",
+          "conditions": [{
+            "type": "frontmost_application_if",
+            "bundle_identifiers": ["com.google.Chrome"]
+          }],
+          "from": {"modifiers": {"mandatory": ["control"]}, "key_code": "r"},
+          "to": {"modifiers": ["left_command"], "key_code": "r"}
         },
         {
           "type": "basic",
