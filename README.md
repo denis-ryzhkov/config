@@ -2,6 +2,7 @@
 
 Configuration of tools I use:
 * [lubuntu](#lubuntu)
+* [macos](#macos)
 * [kitty](#kitty)
 * [micro](#micro)
 * [bash](#bash)
@@ -87,6 +88,42 @@ apt install nvidia-driver-470
 reboot
 ```
 
+## macos
+
+### On Logitech mouse wheel scroll issues
+
+Install and configure https://www.logitech.com/en-us/software/logi-options-plus.html
+
+### karabiner
+
+https://karabiner-elements.pqrs.org/
+
+Install from the link above.
+
+Configure:
+```
+cp karabiner/dr.json ~/.config/karabiner/assets/complex_modifications/
+```
+
+Open "Karabiner-Elements" - Complex Modifications - Add rule - Personal - Enable All
+
+Docs:  
+[files](https://karabiner-elements.pqrs.org/docs/json/root-data-structure/#custom-json-file-in-configkarabinerassetscomplex_modifications),  
+[manipulators](https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/)
+
+### homebrew
+
+https://brew.sh/
+
+Install:
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.bashrc
+echo 'source ~/.bashrc' >> ~/.profile
+brew analytics off
+```
+
 ## kitty
 
 https://sw.kovidgoyal.net/kitty/
@@ -119,9 +156,14 @@ Usage:
 
 https://micro-editor.github.io/
 
-Install:
+Install for Linux:
 ```
 sudo snap install micro --classic
+```
+
+Install for macOS:
+```
+brew install micro
 ```
 
 Configure:
@@ -154,6 +196,13 @@ e README.md
 
 https://www.gnu.org/software/bash/
 
+Install new version - for macOS only:
+```
+brew install bash
+echo $(brew --prefix)/bin/bash | sudo tee -a /etc/shells
+chpass -s $(brew --prefix)/bin/bash
+```
+
 Configure:
 ```
 e ~/.bashrc
@@ -164,8 +213,13 @@ alias cp='rsync -ah --progress'
 alias e=micro
 alias gd='git diff --color-words'
 alias gl='git log --decorate=full --graph'
+
+alias l='ls -a1F'
 alias ll='ls -alF --time-style=long-iso'
+# For macOS: alias ll='ls -alFD "%F %T %Z"'
+
 alias o=xdg-open
+# For macOS: alias o=open
 
 function difl { colordiff -u "$1" "$2" | less -r; }
 function difw { wdiff "$1" "$2" | colordiff | less -r; }

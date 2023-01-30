@@ -1,0 +1,139 @@
+{
+  "title": "Personal rules (@denis-ryzhkov)",
+  "rules": [
+    {
+      "description": "Alt+Tab should switch windows",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {"modifiers": {"mandatory": ["option"]}, "key_code": "tab"},
+          "to": {"modifiers": ["left_command"], "key_code": "tab"}
+        }
+      ]
+    },
+    {
+      "description": "Ctrl+C, Ctrl+V, Ctrl+X should work with clipboard",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [{
+            "type": "frontmost_application_unless",
+            "bundle_identifiers": ["net.kovidgoyal.kitty"]
+          }],
+          "from": {"modifiers": {"mandatory": ["control"]}, "key_code": "c"},
+          "to": {"modifiers": ["left_command"], "key_code": "c"}
+        },
+        {
+          "type": "basic",
+          "conditions": [{
+            "type": "frontmost_application_unless",
+            "bundle_identifiers": ["net.kovidgoyal.kitty"]
+          }],
+          "from": {"modifiers": {"mandatory": ["control"]}, "key_code": "v"},
+          "to": {"modifiers": ["left_command"], "key_code": "v"}
+        },
+        {
+          "type": "basic",
+          "conditions": [{
+            "type": "frontmost_application_unless",
+            "bundle_identifiers": ["net.kovidgoyal.kitty"]
+          }],
+          "from": {"modifiers": {"mandatory": ["control"]}, "key_code": "x"},
+          "to": {"modifiers": ["left_command"], "key_code": "x"}
+        }
+      ]
+    },
+    {
+      "description": "Ctrl+Z should undo",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [{
+            "type": "frontmost_application_unless",
+            "bundle_identifiers": ["net.kovidgoyal.kitty"]
+          }],
+          "from": {"modifiers": {"mandatory": ["control"]}, "key_code": "z"},
+          "to": {"modifiers": ["left_command"], "key_code": "z"}
+        }
+      ]
+    },
+    {
+      "description": "Chrome: F6 - address bar, Ctrl+H - History, Ctrl+F4 - Close tab",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [{
+            "type": "frontmost_application_if",
+            "bundle_identifiers": ["com.google.Chrome"]
+          }],
+          "from": {"key_code": "f6"},
+          "to": {"modifiers": ["left_command"], "key_code": "l"}
+        },
+        {
+          "type": "basic",
+          "conditions": [{
+            "type": "frontmost_application_if",
+            "bundle_identifiers": ["com.google.Chrome"]
+          }],
+          "from": {"modifiers": {"mandatory": ["control"]}, "key_code": "h"},
+          "to": {"modifiers": ["left_command"], "key_code": "y"}
+        },
+        {
+          "type": "basic",
+          "conditions": [{
+            "type": "frontmost_application_if",
+            "bundle_identifiers": ["com.google.Chrome"]
+          }],
+          "from": {"modifiers": {"mandatory": ["control"]}, "key_code": "f4"},
+          "to": {"modifiers": ["left_command"], "key_code": "w"}
+        }
+      ]
+    },
+    {
+      "description": "Chrome: Ctrl+[Shift]+T should open new/previous tab",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [{
+            "type": "frontmost_application_if",
+            "bundle_identifiers": ["com.google.Chrome"]
+          }],
+          "from": {
+            "modifiers": {"mandatory": ["control"], "optional": ["shift"]},
+            "key_code": "t"
+          },
+          "to": {"modifiers": ["left_command"], "key_code": "t"}
+        }
+      ]
+    },
+    {
+      "description": "Ctrl+Left/Right should jump, +Shift should select",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [{
+            "type": "frontmost_application_unless",
+            "bundle_identifiers": ["net.kovidgoyal.kitty"]
+          }],
+          "from": {
+            "modifiers": {"mandatory": ["control"], "optional": ["shift"]},
+            "key_code": "left_arrow"
+          },
+          "to": {"modifiers": ["left_option"], "key_code": "left_arrow"}
+        },
+        {
+          "type": "basic",
+          "conditions": [{
+            "type": "frontmost_application_unless",
+            "bundle_identifiers": ["net.kovidgoyal.kitty"]
+          }],
+          "from": {
+            "modifiers": {"mandatory": ["control"], "optional": ["shift"]},
+            "key_code": "right_arrow"
+          },
+          "to": {"modifiers": ["left_option"], "key_code": "right_arrow"}
+        }
+      ]
+    }
+  ]
+}
