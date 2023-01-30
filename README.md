@@ -107,8 +107,8 @@ cp karabiner/dr.json ~/.config/karabiner/assets/complex_modifications/
 
 Open "Karabiner-Elements" - Complex Modifications - Add rule - Personal - Enable All
 
-Docs:  
-[files](https://karabiner-elements.pqrs.org/docs/json/root-data-structure/#custom-json-file-in-configkarabinerassetscomplex_modifications),  
+Docs:
+[files](https://karabiner-elements.pqrs.org/docs/json/root-data-structure/#custom-json-file-in-configkarabinerassetscomplex_modifications),
 [manipulators](https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/)
 
 ### homebrew
