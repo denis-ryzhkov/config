@@ -58,7 +58,7 @@
       ]
     },
     {
-      "description": "Chrome: F6 - address bar, Ctrl+R - Reload, Ctrl+H - History, Ctrl+F4 - Close tab",
+      "description": "Chrome: Ctrl+F - Find, Ctrl+H - History, Ctrl+R - Reload, Ctrl+F4 - Close tab, F6 - Location",
       "manipulators": [
         {
           "type": "basic",
@@ -66,8 +66,8 @@
             "type": "frontmost_application_if",
             "bundle_identifiers": ["com.google.Chrome"]
           }],
-          "from": {"key_code": "f6"},
-          "to": {"modifiers": ["left_command"], "key_code": "l"}
+          "from": {"modifiers": {"mandatory": ["control"]}, "key_code": "f"},
+          "to": {"modifiers": ["left_command"], "key_code": "f"}
         },
         {
           "type": "basic",
@@ -95,6 +95,15 @@
           }],
           "from": {"modifiers": {"mandatory": ["control"]}, "key_code": "f4"},
           "to": {"modifiers": ["left_command"], "key_code": "w"}
+        },
+        {
+          "type": "basic",
+          "conditions": [{
+            "type": "frontmost_application_if",
+            "bundle_identifiers": ["com.google.Chrome"]
+          }],
+          "from": {"key_code": "f6"},
+          "to": {"modifiers": ["left_command"], "key_code": "l"}
         }
       ]
     },
