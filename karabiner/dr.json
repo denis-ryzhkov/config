@@ -2,12 +2,17 @@
   "title": "Personal rules (@denis-ryzhkov)",
   "rules": [
     {
-      "description": "Alt+Tab should switch windows",
+      "description": "Alt+Tab should switch windows, Win+L should lock screen",
       "manipulators": [
         {
           "type": "basic",
           "from": {"modifiers": {"mandatory": ["option"]}, "key_code": "tab"},
           "to": {"modifiers": ["left_command"], "key_code": "tab"}
+        },
+        {
+          "type": "basic",
+          "from": {"modifiers": {"mandatory": ["command"]}, "key_code": "l"},
+          "to": {"modifiers": ["left_control", "left_command"], "key_code": "q"}
         }
       ]
     },
