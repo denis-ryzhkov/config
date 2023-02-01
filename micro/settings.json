@@ -5,16 +5,9 @@
     "diffgutter": true,
     "ft:dart": {
         "colorcolumn": 80,
-        "tabsize": 2
     },
-    "ft:html": {
-        "tabsize": 2
-    },
-    "ft:json": {
-        "tabsize": 2
-    },
-    "ft:yaml": {
-        "tabsize": 2
+    "ft:python": {
+        "tabsize": 4
     },
     "linter": false,
     "parsecursor": true,
@@ -27,6 +20,6 @@
     "savehistory": false,
     "statusformatl": "L$(line)/$(status.lines) C$(col)",
     "statusformatr": "$(status.branch) $(filename) $(modified)",
-    "tabsize": 4,
+    "tabsize": 2,
     "tabstospaces": true
 }
