@@ -172,8 +172,8 @@ micro -plugin install bounce manipulator
 sudo !!
 cp micro/* ~/.config/micro/
 sudo cp micro/* /root/.config/micro/
-echo -e '\nalias e=micro' >> ~/.bashrc
-echo -e '\nalias e=micro' | sudo tee -a /root/.bashrc
+echo 'alias e=micro' >> ~/.bashrc
+echo 'alias e=micro' | sudo tee -a /root/.bashrc
 exit
 ```
 
@@ -199,8 +199,12 @@ https://www.gnu.org/software/bash/
 Install new version - for macOS only:
 ```
 brew install bash
-echo $(brew --prefix)/bin/bash | sudo tee -a /etc/shells
-chpass -s $(brew --prefix)/bin/bash
+echo /opt/homebrew/bin/bash | sudo tee -a /etc/shells
+chpass -s /opt/homebrew/bin/bash
+
+brew install bash-completion
+. /opt/homebrew/etc/profile.d/bash_completion.sh
+echo '. /opt/homebrew/etc/profile.d/bash_completion.sh' >> ~/.bashrc
 ```
 
 Configure:
