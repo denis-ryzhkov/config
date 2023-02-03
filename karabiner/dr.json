@@ -139,7 +139,7 @@
       ]
     },
     {
-      "description": "Ctrl+Left/Right should jump, +Shift should select",
+      "description": "Ctrl+Left/Right and Home/End should jump, +Shift should select",
       "manipulators": [
         {
           "type": "basic",
@@ -164,6 +164,24 @@
             "key_code": "right_arrow"
           },
           "to": {"modifiers": ["left_option"], "key_code": "right_arrow"}
+        },
+        {
+          "type": "basic",
+          "conditions": [{
+            "type": "frontmost_application_unless",
+            "bundle_identifiers": ["net.kovidgoyal.kitty"]
+          }],
+          "from": {"key_code": "home"},
+          "to": {"modifiers": ["left_command"], "key_code": "left_arrow"}
+        },
+        {
+          "type": "basic",
+          "conditions": [{
+            "type": "frontmost_application_unless",
+            "bundle_identifiers": ["net.kovidgoyal.kitty"]
+          }],
+          "from": {"key_code": "end"},
+          "to": {"modifiers": ["left_command"], "key_code": "right_arrow"}
         }
       ]
     }
