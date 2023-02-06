@@ -171,7 +171,7 @@
             "type": "frontmost_application_unless",
             "bundle_identifiers": ["net.kovidgoyal.kitty"]
           }],
-          "from": {"key_code": "home"},
+          "from": {"modifiers": {"optional": ["shift"]}, "key_code": "home"},
           "to": {"modifiers": ["left_command"], "key_code": "left_arrow"}
         },
         {
@@ -180,7 +180,7 @@
             "type": "frontmost_application_unless",
             "bundle_identifiers": ["net.kovidgoyal.kitty"]
           }],
-          "from": {"key_code": "end"},
+          "from": {"modifiers": {"optional": ["shift"]}, "key_code": "end"},
           "to": {"modifiers": ["left_command"], "key_code": "right_arrow"}
         }
       ]
