@@ -105,7 +105,7 @@
       ]
     },
     {
-      "description": "GUI: Ctrl+Z should undo, Ctrl+K should insert link",
+      "description": "GUI: Ctrl+Z - undo, Ctrl+B - bold, Ctrl+K - insert link",
       "manipulators": [
         {
           "type": "basic",
@@ -115,6 +115,15 @@
           }],
           "from": {"modifiers": {"mandatory": ["control"]}, "key_code": "z"},
           "to": {"modifiers": ["left_command"], "key_code": "z"}
+        },
+        {
+          "type": "basic",
+          "conditions": [{
+            "type": "frontmost_application_unless",
+            "bundle_identifiers": ["net.kovidgoyal.kitty"]
+          }],
+          "from": {"modifiers": {"mandatory": ["control"]}, "key_code": "b"},
+          "to": {"modifiers": ["left_command"], "key_code": "b"}
         },
         {
           "type": "basic",
