@@ -2,7 +2,7 @@
   "title": "Personal rules (@denis-ryzhkov)",
   "rules": [
     {
-      "description": "Alt+Tab should switch windows, Win+L should lock screen",
+      "description": "Global: Alt+Tab should switch windows, Win+L should lock screen",
       "manipulators": [
         {
           "type": "basic",
@@ -17,7 +17,7 @@
       ]
     },
     {
-      "description": "Ctrl+A/X/C/V should select all, cut, copy, paste",
+      "description": "GUI: Ctrl+A/X/C/V should select all, cut, copy, paste",
       "manipulators": [
         {
           "type": "basic",
@@ -58,7 +58,54 @@
       ]
     },
     {
-      "description": "Ctrl+Z should undo",
+      "description": "GUI: Ctrl+Left/Right and Home/End should jump, +Shift should select",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [{
+            "type": "frontmost_application_unless",
+            "bundle_identifiers": ["net.kovidgoyal.kitty"]
+          }],
+          "from": {
+            "modifiers": {"mandatory": ["control"], "optional": ["shift"]},
+            "key_code": "left_arrow"
+          },
+          "to": {"modifiers": ["left_option"], "key_code": "left_arrow"}
+        },
+        {
+          "type": "basic",
+          "conditions": [{
+            "type": "frontmost_application_unless",
+            "bundle_identifiers": ["net.kovidgoyal.kitty"]
+          }],
+          "from": {
+            "modifiers": {"mandatory": ["control"], "optional": ["shift"]},
+            "key_code": "right_arrow"
+          },
+          "to": {"modifiers": ["left_option"], "key_code": "right_arrow"}
+        },
+        {
+          "type": "basic",
+          "conditions": [{
+            "type": "frontmost_application_unless",
+            "bundle_identifiers": ["net.kovidgoyal.kitty"]
+          }],
+          "from": {"modifiers": {"optional": ["shift"]}, "key_code": "home"},
+          "to": {"modifiers": ["left_command"], "key_code": "left_arrow"}
+        },
+        {
+          "type": "basic",
+          "conditions": [{
+            "type": "frontmost_application_unless",
+            "bundle_identifiers": ["net.kovidgoyal.kitty"]
+          }],
+          "from": {"modifiers": {"optional": ["shift"]}, "key_code": "end"},
+          "to": {"modifiers": ["left_command"], "key_code": "right_arrow"}
+        }
+      ]
+    },
+    {
+      "description": "GUI: Ctrl+Z should undo, Ctrl+K should insert link",
       "manipulators": [
         {
           "type": "basic",
@@ -68,6 +115,15 @@
           }],
           "from": {"modifiers": {"mandatory": ["control"]}, "key_code": "z"},
           "to": {"modifiers": ["left_command"], "key_code": "z"}
+        },
+        {
+          "type": "basic",
+          "conditions": [{
+            "type": "frontmost_application_unless",
+            "bundle_identifiers": ["net.kovidgoyal.kitty"]
+          }],
+          "from": {"modifiers": {"mandatory": ["control"]}, "key_code": "k"},
+          "to": {"modifiers": ["left_command"], "key_code": "k"}
         }
       ]
     },
@@ -135,53 +191,6 @@
             "key_code": "t"
           },
           "to": {"modifiers": ["left_command"], "key_code": "t"}
-        }
-      ]
-    },
-    {
-      "description": "Ctrl+Left/Right and Home/End should jump, +Shift should select",
-      "manipulators": [
-        {
-          "type": "basic",
-          "conditions": [{
-            "type": "frontmost_application_unless",
-            "bundle_identifiers": ["net.kovidgoyal.kitty"]
-          }],
-          "from": {
-            "modifiers": {"mandatory": ["control"], "optional": ["shift"]},
-            "key_code": "left_arrow"
-          },
-          "to": {"modifiers": ["left_option"], "key_code": "left_arrow"}
-        },
-        {
-          "type": "basic",
-          "conditions": [{
-            "type": "frontmost_application_unless",
-            "bundle_identifiers": ["net.kovidgoyal.kitty"]
-          }],
-          "from": {
-            "modifiers": {"mandatory": ["control"], "optional": ["shift"]},
-            "key_code": "right_arrow"
-          },
-          "to": {"modifiers": ["left_option"], "key_code": "right_arrow"}
-        },
-        {
-          "type": "basic",
-          "conditions": [{
-            "type": "frontmost_application_unless",
-            "bundle_identifiers": ["net.kovidgoyal.kitty"]
-          }],
-          "from": {"modifiers": {"optional": ["shift"]}, "key_code": "home"},
-          "to": {"modifiers": ["left_command"], "key_code": "left_arrow"}
-        },
-        {
-          "type": "basic",
-          "conditions": [{
-            "type": "frontmost_application_unless",
-            "bundle_identifiers": ["net.kovidgoyal.kitty"]
-          }],
-          "from": {"modifiers": {"optional": ["shift"]}, "key_code": "end"},
-          "to": {"modifiers": ["left_command"], "key_code": "right_arrow"}
         }
       ]
     }
