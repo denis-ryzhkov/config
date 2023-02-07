@@ -105,8 +105,17 @@
       ]
     },
     {
-      "description": "GUI: Ctrl+Z - undo, Ctrl+B - bold, Ctrl+K - insert link",
+      "description": "GUI: Del - delete, Ctrl+Z - undo, Ctrl+B - bold, Ctrl+K - insert link",
       "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [{
+            "type": "frontmost_application_unless",
+            "bundle_identifiers": ["net.kovidgoyal.kitty"]
+          }],
+          "from": {"key_code": "delete_forward"},
+          "to": {"modifiers": ["left_command"], "key_code": "delete_or_backspace"}
+        },
         {
           "type": "basic",
           "conditions": [{
