@@ -105,17 +105,8 @@
       ]
     },
     {
-      "description": "GUI: Del - delete, Ctrl+Z - undo, Ctrl+B - bold, Ctrl+K - insert link",
+      "description": "GUI: Ctrl+Z - undo, Ctrl+B - bold, Ctrl+K - insert link",
       "manipulators": [
-        {
-          "type": "basic",
-          "conditions": [{
-            "type": "frontmost_application_unless",
-            "bundle_identifiers": ["net.kovidgoyal.kitty"]
-          }],
-          "from": {"key_code": "delete_forward"},
-          "to": {"modifiers": ["left_command"], "key_code": "delete_or_backspace"}
-        },
         {
           "type": "basic",
           "conditions": [{
@@ -142,6 +133,20 @@
           }],
           "from": {"modifiers": {"mandatory": ["control"]}, "key_code": "k"},
           "to": {"modifiers": ["left_command"], "key_code": "k"}
+        }
+      ]
+    },
+    {
+      "description": "Finder: Del - delete",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [{
+            "type": "frontmost_application_if",
+            "bundle_identifiers": ["com.apple.finder"]
+          }],
+          "from": {"key_code": "delete_forward"},
+          "to": {"modifiers": ["left_command"], "key_code": "delete_or_backspace"}
         }
       ]
     },
