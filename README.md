@@ -158,7 +158,11 @@ https://micro-editor.github.io/
 
 Install for Linux:
 ```
-sudo snap install micro --classic
+cd /tmp
+curl https://getmic.ro | bash
+sudo mv micro /usr/local/bin/
+cd /usr/local/bin/
+curl https://getmic.ro/r | sudo bash
 ```
 
 Install for macOS:
