@@ -11,3 +11,6 @@ defaultBranch = main
 
 [push]
 default = simple
+
+[pull]
+rebase = true
