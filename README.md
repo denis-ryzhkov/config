@@ -136,7 +136,7 @@ curl -L https://sw.kovidgoyal.net/kitty/installer.sh | bash
 Configure:
 ```
 cp kitty/dr.conf ~/.config/kitty/
-echo -e '\ninclude dr.conf' >> ~/.config/kitty/kitty.conf
+echo 'include dr.conf' >> ~/.config/kitty/kitty.conf
 
 sudo visudo
 # Append:
