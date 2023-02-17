@@ -17,7 +17,7 @@
       ]
     },
     {
-      "description": "GUI: Ctrl+A/X/C/V should select all, cut, copy, paste",
+      "description": "GUI: Ctrl+A/X/C/(Shift+)V should select all, cut, copy, paste",
       "manipulators": [
         {
           "type": "basic",
@@ -43,7 +43,10 @@
             "type": "frontmost_application_unless",
             "bundle_identifiers": ["net.kovidgoyal.kitty"]
           }],
-          "from": {"modifiers": {"mandatory": ["control"]}, "key_code": "v"},
+          "from": {
+            "modifiers": {"mandatory": ["control"], "optional": ["shift"]},
+            "key_code": "v"
+          },
           "to": {"modifiers": ["left_command"], "key_code": "v"}
         },
         {
