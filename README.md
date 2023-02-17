@@ -218,6 +218,7 @@ e ~/.bashrc
 
 alias cd='cd -P'
 alias cp='rsync -ah --progress'
+alias difl='colordiff -u'
 alias e=micro
 alias gd='git diff --color-words'
 alias gl='git log --decorate=full --graph'
@@ -228,9 +229,6 @@ alias ll='ls -alF --time-style=long-iso'
 
 alias o=xdg-open
 # For macOS: alias o=open
-
-function difl { colordiff -u "$1" "$2" | less -r; }
-function difw { wdiff "$1" "$2" | colordiff | less -r; }
 
 CDPATH=$HOME/.cdpath  # cd .cdpath && ln -s /path/to/frequent/dir && cd dir
 EDITOR=micro
