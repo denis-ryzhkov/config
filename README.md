@@ -232,6 +232,7 @@ alias o=xdg-open
 
 CDPATH=$HOME/.cdpath  # cd .cdpath && ln -s /path/to/frequent/dir && cd dir
 EDITOR=micro
+PS1='\[\033[35m\]\u@\h:\w\$\[\033[0m\] '
 VISUAL=$EDITOR
 ```
 
