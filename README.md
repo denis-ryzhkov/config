@@ -232,6 +232,7 @@ alias ll='ls -alF --time-style=long-iso'
 alias o=xdg-open
 # For macOS: alias o=open
 
+alias rm='echo "Unsafe! Use trm"'
 alias trm=trash-put
 
 CDPATH=$HOME/.cdpath  # cd .cdpath && ln -s /path/to/frequent/dir && cd dir
