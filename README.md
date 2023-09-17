@@ -213,6 +213,8 @@ echo '. /opt/homebrew/etc/profile.d/bash_completion.sh' >> ~/.bashrc
 
 Configure:
 ```
+sudo apt install trash-cli
+
 e ~/.bashrc
 # Append to the end:
 
@@ -222,13 +224,15 @@ alias difl='colordiff -u'
 alias e=micro
 alias gd='git diff --color-words'
 alias gl='git log --decorate=full --graph'
-
 alias l='ls -a1F'
+
 alias ll='ls -alF --time-style=long-iso'
 # For macOS: alias ll='ls -alFD "%F %T %Z"'
 
 alias o=xdg-open
 # For macOS: alias o=open
+
+alias trm=trash-put
 
 CDPATH=$HOME/.cdpath  # cd .cdpath && ln -s /path/to/frequent/dir && cd dir
 EDITOR=micro
