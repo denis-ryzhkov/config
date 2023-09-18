@@ -214,6 +214,7 @@ echo '. /opt/homebrew/etc/profile.d/bash_completion.sh' >> ~/.bashrc
 Configure:
 ```
 sudo apt install trash-cli
+# For macOS: brew install trash
 
 e ~/.bashrc
 # Append to the end:
@@ -234,6 +235,7 @@ alias o=xdg-open
 
 alias rm='echo "Unsafe! Use trm"'
 alias trm=trash-put
+# For macOS: alias trm=trash
 
 CDPATH=$HOME/.cdpath  # cd .cdpath && ln -s /path/to/frequent/dir && cd dir
 EDITOR=micro
