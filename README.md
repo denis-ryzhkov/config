@@ -233,13 +233,15 @@ alias ll='ls -alF --time-style=long-iso'
 alias o=xdg-open
 # For macOS: alias o=open
 
+# For macOS: alias rgrep='grep -r'
+
 alias rm='echo "Unsafe! Use trm"'
 alias trm=trash-put
 # For macOS: alias trm=trash
 
 CDPATH=$HOME/.cdpath  # cd .cdpath && ln -s /path/to/frequent/dir && cd dir
 EDITOR=micro
-PS1='\[\033[35m\]\u@\h:\w\n\$\[\033[0m\] '
+PS1='\[\033[35m\]\w $\[\033[0m\] '
 VISUAL=$EDITOR
 ```
 
