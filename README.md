@@ -236,6 +236,8 @@ alias o=xdg-open
 # For macOS: alias rgrep='grep -r'
 
 alias rm='echo "Unsafe! Use trm"'
+# To bypass this alias: use \rm
+
 alias trm=trash-put
 # For macOS: alias trm=trash
 
