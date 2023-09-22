@@ -5,6 +5,7 @@
     "Alt-k": "lua:bounce.keepLoc",
     "Alt-l": "command-edit:lower",
     "Alt-m": "ToggleMacro",
+    "Alt-r": "command-edit:textfilter sed 's/ /\\n/g'",
     "Alt-s": "command-edit:textfilter sort",
     "Alt-u": "command-edit:upper",
     "Ctrl-MouseLeft": "None",
