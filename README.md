@@ -58,6 +58,8 @@ sudo chmod u+s /usr/bin/lxqt-backlight_backend
 lxqt-config-globalkeyshortcuts
 # XF86MonBrightnessDown - Command: lxqt-backlight_backend --dec
 # XF86MonBrightnessUp - Command: lxqt-backlight_backend --inc
+# Control+F11 - Client: /panel/volume/down
+# Control+F12 - Client: /panel/volume/up
 ```
 
 ### On `ibus` shipped with `zoom` breaks keyboard layouts
