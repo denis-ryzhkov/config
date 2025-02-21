@@ -17,7 +17,7 @@
     "pluginrepos": [],
     "ruler": false,
     "savecursor": true,
-    "savehistory": false,
+    "savehistory": true,
     "statusformatl": "L$(line)/$(status.lines) C$(col)",
     "statusformatr": "$(status.branch) $(filename) $(modified)",
     "tabsize": 2,

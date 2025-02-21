@@ -235,7 +235,7 @@ alias ll='ls -alF --time-style=long-iso'
 alias o=xdg-open
 # For macOS: alias o=open
 
-# For macOS: alias rgrep='grep -r'
+# For macOS: alias rgrep='grep -r --color=auto'
 
 alias rm='echo "Unsafe! Use trm"'
 # To bypass this alias: use \rm
