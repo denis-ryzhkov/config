@@ -244,14 +244,12 @@ alias trm=trash-put
 # For macOS: alias trm=trash
 
 CDPATH=$HOME/.cdpath  # cd .cdpath && ln -s /path/to/frequent/dir && cd dir
-EDITOR=micro
 PS1='\[\033[35m\]\w $\[\033[0m\] '
-VISUAL=$EDITOR
-KUBE_EDITOR=$EDITOR
-```
 
-* `git commit` kept ignoring `micro` even with `GIT_EDITOR` var,
-but `git config --global core.editor micro` solved the issue
+export EDITOR=micro
+export KUBE_EDITOR=$EDITOR
+export VISUAL=$EDITOR
+```
 
 ## git
 
