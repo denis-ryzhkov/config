@@ -7,6 +7,7 @@ Configuration of tools I use:
 * [micro](#micro)
 * [bash](#bash)
 * [git](#git)
+* [cursor](#cursor)
 * [vlc](#vlc)
 * [smplayer](#smplayer)
 * [vsftpd](#vsftpd)
