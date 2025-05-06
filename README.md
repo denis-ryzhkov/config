@@ -262,6 +262,17 @@ e ~/.gitconfig
 # Update `name` and `email`
 ```
 
+## cursor
+
+https://cursor.com/
+
+Configure:
+```
+cursor_config_dir="$HOME/Library/Application Support/Cursor/User"
+mkdir -p "$cursor_config_dir"
+ln -sf "$PWD"/cursor/*.json "$cursor_config_dir"
+```
+
 ## vlc
 
 https://www.videolan.org/vlc/
