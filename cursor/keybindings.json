@@ -66,6 +66,11 @@
         "command": "workbench.action.files.save"
     },
     {
+        "key": "ctrl+y",
+        "command": "editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
         "key": "ctrl+home",
         "command": "cursorTop",
         "when": "textInputFocus"
