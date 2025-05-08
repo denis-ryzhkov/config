@@ -53,6 +53,15 @@
         "when": "editorFocus"
     },
     {
+        "key": "ctrl+r",
+        "command": "-workbench.action.openRecent"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "editor.action.rename",
+        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    },
+    {
         "key": "ctrl+s",
         "command": "workbench.action.files.save"
     },
@@ -65,5 +74,10 @@
         "key": "ctrl+end",
         "command": "cursorBottom",
         "when": "textInputFocus"
+    },
+    {
+        "key": "alt+/",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
     }
 ]
