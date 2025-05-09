@@ -71,6 +71,10 @@
         "when": "textInputFocus && !editorReadonly"
     },
     {
+        "key": "ctrl+shift+z",
+        "command": "redo"
+    },
+    {
         "key": "ctrl+home",
         "command": "cursorTop",
         "when": "textInputFocus"
