@@ -211,7 +211,7 @@ chpass -s /opt/homebrew/bin/bash
 
 brew install bash-completion
 . /opt/homebrew/etc/profile.d/bash_completion.sh
-echo '. /opt/homebrew/etc/profile.d/bash_completion.sh' >> ~/.bashrc
+echo '. /opt/homebrew/etc/bash_completion' >> ~/.bashrc
 ```
 
 Configure:
