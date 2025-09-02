@@ -1,17 +1,18 @@
 {
-    "editor.tabSize": 2,
-    "editor.rulers": [88],
-    "workbench.colorCustomizations": {
-        "editorStickyScroll.background": "#213"
-    },
     "editor.autoClosingBrackets": "never",
     "editor.autoClosingComments": "never",
     "editor.autoClosingDelete": "never",
     "editor.autoClosingOvertype": "never",
     "editor.autoClosingQuotes": "never",
+    "editor.find.loop": false,
+    "editor.rulers": [88],
+    "editor.tabSize": 2,
     "makefile.configureOnOpen": true,
     "redhat.telemetry.enabled": false,
     "vs-kubernetes": {
         "vs-kubernetes.crd-code-completion": "enabled"
+    },
+    "workbench.colorCustomizations": {
+        "editorStickyScroll.background": "#213"
     }
 }
