@@ -7,6 +7,8 @@
     "editor.find.loop": false,
     "editor.rulers": [88],
     "editor.tabSize": 2,
+    "editor.wordWrap": "bounded",
+    "diffEditor.wordWrap": "on",
     "makefile.configureOnOpen": true,
     "redhat.telemetry.enabled": false,
     "vs-kubernetes": {

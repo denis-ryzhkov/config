@@ -127,6 +127,11 @@ echo 'source ~/.bashrc' >> ~/.profile
 brew analytics off
 ```
 
+### Menu Bar Calendar
+
+Install "Menu Bar Calendar" by Sindre Sorhus from App Store,
+Cmd+Drag it closer to the clock.
+
 ## kitty
 
 https://sw.kovidgoyal.net/kitty/
