@@ -257,6 +257,21 @@ export KUBE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 ```
 
+### nvm
+
+`.bashrc` lines for [nvm](https://github.com/nvm-sh/nvm/blob/master/README.md#installing-and-updating):
+```
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+```
+
+To update and auto-use:
+```
+nvm install node
+nvm alias default node
+```
+
 ## git
 
 https://git-scm.com/
