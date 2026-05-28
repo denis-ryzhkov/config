@@ -114,6 +114,12 @@ Docs:
 [files](https://karabiner-elements.pqrs.org/docs/json/root-data-structure/#custom-json-file-in-configkarabinerassetscomplex_modifications),
 [manipulators](https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/)
 
+### Alt+U inserts ¨
+
+* Settings - Keyboard - Text Input - Input Sources - Edit:
+  * "+" - Unicode Hex Input - Add
+  * ABC - "-" - Done
+
 ### homebrew
 
 https://brew.sh/

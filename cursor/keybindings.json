@@ -139,5 +139,18 @@
     {
         "key": "alt+w",
         "command": "editor.action.toggleWordWrap"
+    },
+    {
+        "key": "alt+u",
+        "command": "editor.action.transformToUppercase"
+    },
+    {
+        "key": "alt+l",
+        "command": "-editor.action.inlineDiffs.nextDiffFile",
+        "when": "editorTextFocus && inlineDiffs.hasInlineDiffsInAnyEditor"
+    },
+    {
+        "key": "alt+l",
+        "command": "editor.action.transformToLowercase"
     }
 ]
