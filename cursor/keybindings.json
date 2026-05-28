@@ -110,7 +110,14 @@
     },
     {
         "key": "alt+j",
-        "command": "editor.action.goToSelectionAnchor"
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "editor.action.goToSelectionAnchor",
+                "cursorLeft",
+                "cursorRight"
+            ]
+        }
     },
     {
         "key": "ctrl+q",
@@ -128,5 +135,9 @@
     {
         "key": "cmd+w",
         "command": "-workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "alt+w",
+        "command": "editor.action.toggleWordWrap"
     }
 ]
