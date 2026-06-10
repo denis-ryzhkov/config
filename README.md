@@ -135,8 +135,9 @@ brew analytics off
 
 ### Menu Bar Calendar
 
-Install "Menu Bar Calendar" by Sindre Sorhus from App Store,
-Cmd+Drag it closer to the clock.
+Install "Menu Bar Calendar" by Sindre Sorhus from App Store
+or https://sindresorhus.com/menu-bar-calendar#non-app-store-version
+and Cmd+Drag it closer to the clock.
 
 ## kitty
 
@@ -149,8 +150,11 @@ curl -L https://sw.kovidgoyal.net/kitty/installer.sh | bash
 
 Configure:
 ```
-cp kitty/dr.conf ~/.config/kitty/
-echo 'include dr.conf' >> ~/.config/kitty/kitty.conf
+cp kitty/dr.conf ~/.config/kitty/kitty.conf
+
+# For macOS:
+# Apply the macOS comment inside this file:
+# ~/.config/kitty/kitty.conf
 
 sudo visudo
 # Append:
@@ -227,6 +231,9 @@ echo '. /opt/homebrew/etc/bash_completion' >> ~/.bashrc
 
 Configure:
 ```
+touch ~/.hushlogin
+touch ~/.bash_sessions_disable
+
 sudo apt install trash-cli
 # For macOS: brew install trash
 
@@ -253,7 +260,7 @@ alias rm='echo "Unsafe! Use trm"'
 # To bypass this alias: use \rm
 
 alias trm=trash-put
-# For macOS: alias trm=trash
+# For macOS: alias trm=/opt/homebrew/opt/trash/bin/trash
 
 CDPATH=$HOME/.cdpath  # cd .cdpath && ln -s /path/to/frequent/dir && cd dir
 PS1='\[\033[35m\]\w $\[\033[0m\] '
